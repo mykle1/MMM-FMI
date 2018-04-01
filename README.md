@@ -1,6 +1,6 @@
 # MMM-FMI 
 
-A MagicMirror module that beeps your iPhone and tells you its location
+A MagicMirror module that beeps your iPhone and tells you its location and distance.
 
 ## Examples
 
