@@ -35,7 +35,7 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
             module: 'MMM-FMI',
             header: "",
             position: 'bottom_center',
-	    config: {
+	        config: {
                 email: "Your iCloud email address",
                 pass: "Your iCloud password",
                 lat: "40.111111", 
