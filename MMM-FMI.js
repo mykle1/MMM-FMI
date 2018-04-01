@@ -13,11 +13,11 @@ Module.register("MMM-FMI", {
         animationSpeed: 1000,
         initialLoadDelay: 4250,
         retryDelay: 2500,
-        updateInterval: 10 * 1000,
         email: "",
         pass: "",
         lat: "",
         lon: "",
+        title: "",
     },
 
     getStyles: function() {
@@ -46,15 +46,18 @@ Module.register("MMM-FMI", {
             return wrapper;
         }
 
-/*        // title instead of header so you don't get the header underlined?
+        // title instead of header so you don't get the header underlined?
+        
+        
+        if (this.config,title != ""){
         var title = document.createElement("div");
-        title.classList.add("xsmall", "bright", "title");
-        title.innerHTML = "Find My iPhone";
+        title.classList.add("small", "bright", "title");
+        title.innerHTML = this.config.title;
         wrapper.appendChild(title);
-*/        
+        }
             
         var button = document.createElement("button");
-        button.innerHTML = "<img src = modules/MMM-FMI/images/iphone.png height=15% width=15%>";
+        button.innerHTML = "<img src = modules/MMM-FMI/images/icon.png height=15% width=15%>";
    //   button.innerHTML = '<button class="button">Find My iPhone!</button>';
         button.className = ('button');
 		button.addEventListener("click", () =>  this.getFMI(this));
@@ -68,7 +71,7 @@ Module.register("MMM-FMI", {
             var location = document.createElement("div");
             location.classList.add("xsmall", "bright", "location");
             location.innerHTML = this.LOC.location;
-            self.updateDom;
+//            self.updateDom;
             wrapper.appendChild(location);
         }
         
@@ -76,7 +79,7 @@ Module.register("MMM-FMI", {
             var distance = document.createElement("div");
             distance.classList.add("xsmall", "bright", "distance");
             distance.innerHTML = "Distance to your iPhone is " + this.DIS.result.distance.text;
-            self.updateDom;
+//            self.updateDom;
             wrapper.appendChild(distance);
         }
         
@@ -84,18 +87,29 @@ Module.register("MMM-FMI", {
            var reset = document.createElement("button");
            reset.innerHTML = '<button class="button">Reset this module!</button>';
            reset.className = ('reset');
-		   reset.addEventListener("click", () =>  distance.style.display = "none"); // All credit to Baby Jesus
-           reset.addEventListener("click", () =>  location.style.display = "none"); // All credit to Baby Jesus
-           reset.addEventListener("click", () =>  reset.style.display = "none");    // All credit to Baby Jesus
+		   reset.addEventListener("click", () =>  distance.style.display = "none"); // All credit to Baby Jesus haha
+           reset.addEventListener("click", () =>  location.style.display = "none"); // All credit to Baby Jesus haha
+           reset.addEventListener("click", () =>  reset.style.display = "none");    // All credit to Baby Jesus haha
            wrapper.appendChild(reset);
        }
                         
         return wrapper;
     },
     
+    /////  Add this function to the modules you want to control with voice (Hello-Lucy) //////
+
+    notificationReceived: function(notification, payload) {
+        if (notification === 'HIDE_PHONE') {
+            this.hide(1000);
+        }  else if (notification === 'SHOW_PHONE') {
+            this.show(1000);
+        }
+            
+    },
+    
     
     alertBox: function() {
-        alert ("I'm looking for your iPhone!\n\nDid you simply misplace it?\n\nOr did some motherfucker take it!\n\nClick OK for the location!"); // (this.LOC) not working. Comes before data
+        alert ("I'm looking for your iPhone!\n\nDid you simply misplace it?\n\nOr did some motherfucker take it?!\n\nClick OK for the location!"); // (this.LOC) not working. Comes before data
     },
     
     processFMI: function(data) {
@@ -105,12 +119,12 @@ Module.register("MMM-FMI", {
     },
      processLOC: function(data) {
         this.LOC = data;
-        console.log(this.LOC); 
+//        console.log(this.LOC); 
     },
     
      processDIS: function(data) {
         this.DIS = data;
-        console.log(this.DIS); 
+//        console.log(this.DIS); 
     },
     
     scheduleUpdate: function() {

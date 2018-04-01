@@ -1,10 +1,16 @@
 # MMM-FMI 
 
-A MagicMirror module that beeps your iPhone and tells you its location and distance.
+A MagicMirror module that beeps your iPhone and tells you its location.
+
+## Has this ever happened to you?
+
+How many times have you misplaced your iPhone? You know it's around there somewhere!
+Do you ask someone to call your phone? What if no one is there to help you?
+And what if you really lost your iPhone, or even worse, someone stole it? 
 
 ## Examples
 
-You are presented with an iPhone image
+You are presented with an iPhone image.
 
 ![](images/1.png)
 
@@ -28,24 +34,21 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
 
 * `npm install`
 
-## Requirements
-
-* A mouse, trackpad or touch capable display. (Working on voice activation)
-
 ## Add to Config.js
 
     {
             disabled: false,
             module: 'MMM-FMI',
-            header: "",
+            header: "",                                // standard header, underlined
             position: 'bottom_center',
-	        config: {
+			config: {
                 email: "Your iCloud email address",
                 pass: "Your iCloud password",
-                lat: "40.111111",   // your latitude
-                lon: "-74.111111",  // your longitude
+                lat: "40.111111",                     // your latitude
+                lon: "-74.111111",                    // your longitude
+                title: "",                            // Use instead of header. Not underlined!
                 maxWidth: "400px",
-		}
+			}
         },
 
 ## Mad props!

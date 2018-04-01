@@ -1,4 +1,8 @@
-.button {
+.MMM-FMI .title {
+    color: cyan;
+}
+
+.MMM-FMI .button {
     background-color: #000000;
     border: none;
     color: white;
@@ -9,7 +13,7 @@
     margin: 0px 0px;
 }
 
-.reset {
+.MMM-FMI .reset {
     background-color: #000000;
     border: none;
     color: white;
