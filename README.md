@@ -28,6 +28,10 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
 
 * `npm install`
 
+## Requirements
+
+* A mouse, trackpad or touch capable display. (Working on voice activation)
+
 ## Add to Config.js
 
     {
