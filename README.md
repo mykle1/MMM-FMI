@@ -6,13 +6,15 @@ A MagicMirror module that beeps your iPhone and tells you its location
 
 You are presented with an iPhone image
 
-![](iphone.png)
+![](1.png)
 
 When clicked, it gives you an alert window. Read the alert and click OK.
 
-Then you are present with the location of your iPhone and the distance, while beeping the iPhone itself.
+![](2.png)
 
-![](iphone2.jpg)
+Then you are presented with the location of your iPhone and the distance, while beeping the iPhone itself.
+
+![](3.png)
 
 Click "Reset this module" and only the iPhone icon remains, ready for the next time you need to find your iPhone.
 
