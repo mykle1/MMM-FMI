@@ -8,7 +8,7 @@ How many times have you misplaced your iPhone? You know it's around there somewh
 Do you ask someone to call your phone? What if no one is there to help you? And what if
 your iPhone is on mute. That doesn't make finding it any easier. And what if you really lost your iPhone, or even worse, someone stole it?
 
-This module will beep your iPhone, even if it is on mute, and it will tell you it's location and distance.
+This module will beep your iPhone even if it is on mute and it will tell you it's location.
 
 ## Examples
 
@@ -20,7 +20,7 @@ When clicked, it gives you an alert window. Read the alert and click OK.
 
 ![](images/2.png)
 
-Then you are presented with the location of your iPhone and the distance, while beeping the iPhone itself.
+Then you are presented with the location of your iPhone while beeping the iPhone itself.
 
 ![](images/3.png)
 
@@ -43,7 +43,7 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
             module: 'MMM-FMI',
             header: "",                                // standard header, underlined
             position: 'bottom_center',
-			config: {
+        config: {
                 email: "Your iCloud email address",
                 pass: "Your iCloud password",
                 lat: "40.111111",                     // your latitude
