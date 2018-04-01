@@ -38,8 +38,8 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
 	        config: {
                 email: "Your iCloud email address",
                 pass: "Your iCloud password",
-                lat: "40.111111", 
-                lon: "-74.111111",
+                lat: "40.111111",   // your latitude
+                lon: "-74.111111",  // your longitude
                 maxWidth: "400px",
 		}
         },
