@@ -45,10 +45,10 @@ Module.register("MMM-FMI", {
             wrapper.classList.add("bright", "light", "small");
             return wrapper;
         }
+        
+        
 
         // title instead of header so you don't get the header underlined?
-        
-        
         if (this.config,title != ""){
         var title = document.createElement("div");
         title.classList.add("small", "bright", "title");
@@ -74,20 +74,20 @@ Module.register("MMM-FMI", {
 //            self.updateDom;
             wrapper.appendChild(location);
         }
-        
-        if (this.DIS != null){
-            var distance = document.createElement("div");
-            distance.classList.add("xsmall", "bright", "distance");
-            distance.innerHTML = "Distance to your iPhone is " + this.DIS.result.distance.text;
+            //  The data for distance is not very reliable
+//        if (this.DIS != null){
+//            var distance = document.createElement("div");
+//            distance.classList.add("xsmall", "bright", "distance");
+//            distance.innerHTML = "Distance to your iPhone is " + this.DIS.result.distance.text;
 //            self.updateDom;
-            wrapper.appendChild(distance);
-        }
+//            wrapper.appendChild(distance);
+//        }
         
        if (this.DIS != null){ 
            var reset = document.createElement("button");
            reset.innerHTML = '<button class="button">Reset this module!</button>';
            reset.className = ('reset');
-		   reset.addEventListener("click", () =>  distance.style.display = "none"); // All credit to Baby Jesus haha
+//		   reset.addEventListener("click", () =>  distance.style.display = "none"); // All credit to Baby Jesus haha
            reset.addEventListener("click", () =>  location.style.display = "none"); // All credit to Baby Jesus haha
            reset.addEventListener("click", () =>  reset.style.display = "none");    // All credit to Baby Jesus haha
            wrapper.appendChild(reset);
@@ -109,7 +109,7 @@ Module.register("MMM-FMI", {
     
     
     alertBox: function() {
-        alert ("I'm looking for your iPhone!\n\nDid you simply misplace it?\n\nOr did some motherfucker take it?!\n\nClick OK for the location!"); // (this.LOC) not working. Comes before data
+        alert ("I'm looking for your iPhone!\n\nDid you simply misplace it?\n\nDid some motherfucker take it?!\n\nI'll send a loud beep!\n\nI'll tell you its location.\n\nJust click OK"); // (this.LOC) not working. Comes before data
     },
     
     processFMI: function(data) {
