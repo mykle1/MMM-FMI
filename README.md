@@ -8,7 +8,7 @@ How many times have you misplaced your iPhone? You know it's around there somewh
 Do you ask someone to call your phone? What if no one is there to help you? And what if
 your iPhone is on mute. That doesn't make finding it any easier. And what if you really lost your iPhone, or even worse, someone stole it?
 
-This module will beep your iPhone even if it is on mute and it will tell you it's location.
+This module will beep your iPhone even if it is on mute and will tell you it's location.
 
 ## Examples
 
