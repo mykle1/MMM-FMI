@@ -34,8 +34,8 @@ module.exports = NodeHelper.create({
         if (device) {
  
             //gets the distance of the device from my location 
-            var myLatitude = 40.574780;
-            var myLongitude = -74.112441;
+            var myLatitude = this.config.lat;
+            var myLongitude = this.config.lon;
             var result;
             
             icloud.getDistanceOfDevice(device, myLatitude, myLongitude, function(err, result) {
