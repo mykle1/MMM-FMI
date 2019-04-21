@@ -1,4 +1,6 @@
-#### Update 4/20.19
+#### Update 4/20/19
+
+I have not been able to address the new Apple Two Factor Authentication and this module. However, it does continue to work on my iPhone 6, iOS 11.2.6
 
 The data no longer includes the address. However, it does include the latitude and longitude of your iPhone.
 This is necessarily long for accuracy. I've tested it and I am satisfied with the results. Until I can add
