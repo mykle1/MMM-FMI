@@ -15,50 +15,51 @@ module.exports = NodeHelper.create({
         var duration = '';
         var location = '';
         icloud.apple_id = this.config.email; //this.config.login
-        icloud.password = this.config.pass; //this.config.pass 
-        
-        
+        icloud.password = this.config.pass; //this.config.pass
+
+
         icloud.getDevices(function(error, devices) {
         var device;
- console.log(devices);
+          self.sendSocketNotification('FMI_DISTANCE', devices);
+        console.log(devices);
         if (error) {
             throw error;
         }
-        //pick a device with location and findMyPhone enabled 
+        //pick a device with location and findMyPhone enabled
         devices.forEach(function(d) {
             if (device == undefined && d.location && d.lostModeCapable) {
                 device = d;
             }
         });
- 
+
         if (device) {
- 
-            //gets the distance of the device from my location 
+
+            //gets the distance of the device from my location
             var myLatitude = this.config.lat;
             var myLongitude = this.config.lon;
             var result;
-            
+
             icloud.getDistanceOfDevice(device, myLatitude, myLongitude, function(err, result) {
-                console.log("Distance: " + result); // result.distance.text);
-                console.log("Driving time: " +  result); // result.duration.text);
-                self.sendSocketNotification('FMI_DISTANCE', {result});
+              //  console.log("Distance: " + result); // result.distance.text);
+              //    console.log("Driving time: " +  result); // result.duration.text);
+              //  self.sendSocketNotification('FMI_DISTANCE', {result});
             });
- 
+
             icloud.alertDevice(device.id, function(err) {
                 console.log("Beep Beep!");
-                self.sendSocketNotification('FMI_RESULT', result);
+              //  self.sendSocketNotification('FMI_RESULT', result);
             });
- 
+
             icloud.getLocationOfDevice(device, function(err, location) {
-                console.log(location);
-                self.sendSocketNotification('FMI_LOCATION', {location});
+            //    console.log(location);
+              //  self.sendSocketNotification('FMI_LOCATION', {location});
             });
         }
-            
-            
-            
+
+
+
     });
-        
+
 
     },
 
