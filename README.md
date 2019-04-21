@@ -1,3 +1,11 @@
+#### Update 4/20.19
+
+The data no longer includes the address. However, it does include the latitude and longitude of your iPhone.
+This is necessarily long for accuracy. I've tested it and I am satisfied with the results. Until I can add
+this function to the module you can enter your lat and long here for an address.
+https://www.latlong.net/Show-Latitude-Longitude.html
+The module now shows the battery power of your iPhone.
+
 # MMM-FMI 
 
 A MagicMirror module that beeps your iPhone and tells you its location.
