@@ -4,8 +4,9 @@ I have not been able to address the new Apple Two Factor Authentication and this
 
 The data no longer includes the address. However, it does include the latitude and longitude of your iPhone.
 This is necessarily long for accuracy. I've tested it and I am satisfied with the results. Until I can add
-this function to the module you can enter your lat and long here for an address.
+this function to the module you can enter the lat and long the module gives you at this url for an address.
 https://www.latlong.net/Show-Latitude-Longitude.html
+
 The module now shows the battery power of your iPhone.
 
 # MMM-FMI 
