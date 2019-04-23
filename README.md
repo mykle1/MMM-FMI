@@ -31,7 +31,7 @@ When clicked, it gives you an alert window. Read the alert and click OK.
 
 ![](images/2.png)
 
-Then you are presented with the name of your iPhone, latitude and longitude of you phone,
+Then you are presented with the name of your iPhone (Whatever you named it), the latitude and longitude of your phone,
 and the current battery level of your phone.
 
 ![](images/5.png)
@@ -62,8 +62,6 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
             config: {
                 email: "Your iCloud email address",
                 pass: "Your iCloud password",
-                lat: "40.111111",                     // your latitude
-                lon: "-74.111111",                    // your longitude
                 title: "",                            // Use instead of header. Not underlined! Customizable. See css file.
                 maxWidth: "400px",
 			}
