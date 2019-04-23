@@ -31,9 +31,10 @@ When clicked, it gives you an alert window. Read the alert and click OK.
 
 ![](images/2.png)
 
-Then you are presented with the location of your iPhone while beeping the iPhone itself.
+Then you are presented with the name of your iPhone, latitude and longitude of you phone,
+and the current battery level of your phone.
 
-![](images/3.png)
+![](images/3.png) ![](images/4.png)
 
 Click "Reset this module" and only the iPhone icon remains, ready for the next time you need to find your iPhone.
 
@@ -59,7 +60,7 @@ Click "Reset this module" and only the iPhone icon remains, ready for the next t
                 pass: "Your iCloud password",
                 lat: "40.111111",                     // your latitude
                 lon: "-74.111111",                    // your longitude
-                title: "",                            // Use instead of header. Not underlined!
+                title: "",                            // Use instead of header. Not underlined! Customizable. See css file.
                 maxWidth: "400px",
 			}
         },
