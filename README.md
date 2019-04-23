@@ -34,7 +34,11 @@ When clicked, it gives you an alert window. Read the alert and click OK.
 Then you are presented with the name of your iPhone, latitude and longitude of you phone,
 and the current battery level of your phone.
 
-![](images/3.png) ![](images/4.png)
+![](images/5.png)
+
+Fully customizable, Line by line. See css file.
+
+![](images/4.png)
 
 Click "Reset this module" and only the iPhone icon remains, ready for the next time you need to find your iPhone.
 
